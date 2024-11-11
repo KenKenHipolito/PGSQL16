@@ -7,10 +7,14 @@ COPY ./custom-config/postgresql.conf /etc/postgresql/postgresql.conf
 
 ENV POSTGRES_USER postgres
 ENV POSTGRES_PASSWORD password
-ENV POSTGRES_DB facial_management
+ENV POSTGRES_DB testing
 
 # Expose the PostgreSQL port
 EXPOSE 5432
 
 # Start PostgreSQL
 CMD ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+
+# docker build -t pgsql-test:latest .
+# docker tag pgsql-test:latest whoamiken/pgsql-test:latest 
+# docker push whoamiken/pgsql-test:latest
