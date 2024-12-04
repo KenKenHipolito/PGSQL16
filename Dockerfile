@@ -7,7 +7,7 @@ COPY ./custom-config/postgresql.conf /etc/postgresql/postgresql.conf
 
 ENV POSTGRES_USER postgres
 ENV POSTGRES_PASSWORD password
-ENV POSTGRES_DB testing
+ENV POSTGRES_DB facial_management
 
 # Expose the PostgreSQL port
 EXPOSE 5432
